@@ -830,13 +830,26 @@ transition: opacity 500ms linear, visibility 500ms;
     background: #FFFFFF;
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 
-.cross {
+.modal-close-icon {
+    fill: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
 }
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+    fill: #2196F3;
+}
+
 
 
 .is-hidden {
@@ -890,6 +903,8 @@ border-radius: 4px;
     top: 50%;
     transform: translateY(-50%);
 }
+
+
 
 .form-input:focus + .modal-icon {
     fill: #2196F3;
